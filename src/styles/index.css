@@ -1,0 +1,121 @@
+header {
+    display: block;
+}
+.nav__desktop{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    height: 80px;
+    width: 100%;
+    background-color: var(--mode);
+    box-shadow: 0 2px 3px rgb(0 0 0 / 25%), 0 1px 3px rgb(0 0 0 / 22%);
+}
+
+.logo{
+font-size: 30px;
+    color: #364FC7;
+    font-family: sans-serif;
+}
+
+.hidden{
+    display: none;
+}
+
+.btn__menu{
+    background-color: transparent;
+    border: none;
+}
+
+.btn__close{
+    background-color: transparent;
+    border: none;
+}
+
+.menu__mobile{
+    display: flex;
+    flex-direction: column;
+    animation: menu 0.5s ease;
+}
+.ul__mobile {
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+    padding: 50px;
+    margin-bottom: 20px;
+    border-bottom: solid 1px var(--grey4);
+}
+
+.ul__mobile li{
+    font-size: 16px;
+    font-weight: 500;
+}
+
+.menu__mobile>input{
+        width: 231px;
+        height: 38px;
+        background-color: var(--grey5);
+        border-radius: 8px;
+        border: 0;
+        background-image: url(../assets/pesquisa.png);
+        background-position: 10px;
+        background-repeat: no-repeat;
+        margin-left: 2rem;
+
+}
+.mobile__profile{
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    font-size: 14px;
+    font-weight: 500;
+    padding: 20px 0px 0px 50px;
+}
+.div__desktop{
+    display: none;
+}
+.ul__desktop{
+    display: none;
+}
+
+@media(min-width:865px){
+    .btn__menu{
+        display:none
+    }
+    .nav__desktop{
+        display: flex;
+    }
+    .ul__desktop{
+        width: 30%;
+        display: flex;
+        gap: 15px;
+    }
+    .ul li ~ li {
+        font-size: 16px;
+        font-weight: 500;
+        font-family: var(--font-roboto);
+        color: var(--grey2);
+    }
+    .div__desktop{
+        display: flex;
+        align-items: center;
+    }
+    .div__desktop>input{
+        width: 231px;
+        height: 38px;
+        background-color: var(--grey5);
+        border-radius: 8px;
+        border: 0;
+        background-image: url(/src/assets/pesquisa.png);
+        background-position: 10px;
+        background-repeat: no-repeat;
+    }
+    .profile__desktop{
+        margin-left: 30px;
+    }
+    .ul__desktop>li {
+        font-size: 16px;
+        font-weight: 500;
+        font-family: var(--font-roboto);
+    }
+}

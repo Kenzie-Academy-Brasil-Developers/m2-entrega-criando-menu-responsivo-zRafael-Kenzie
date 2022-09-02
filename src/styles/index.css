@@ -1,7 +1,8 @@
 header {
     display: block;
 }
-.nav__desktop{
+
+.nav__desktop {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -12,31 +13,32 @@ header {
     box-shadow: 0 2px 3px rgb(0 0 0 / 25%), 0 1px 3px rgb(0 0 0 / 22%);
 }
 
-.logo{
-font-size: 30px;
+.logo {
+    font-size: 30px;
     color: #364FC7;
     font-family: sans-serif;
 }
 
-.hidden{
+.hidden {
     display: none;
 }
 
-.btn__menu{
+.btn__menu {
     background-color: transparent;
     border: none;
 }
 
-.btn__close{
+.btn__close {
     background-color: transparent;
     border: none;
 }
 
-.menu__mobile{
+.menu__mobile {
     display: flex;
     flex-direction: column;
     animation: menu 0.5s ease;
 }
+
 .ul__mobile {
     display: flex;
     flex-direction: column;
@@ -44,37 +46,44 @@ font-size: 30px;
     padding: 50px;
     margin-bottom: 20px;
     border-bottom: solid 1px var(--grey4);
+    animation: downMenu 700ms ease-out;
+    transform-origin: top center;
+    transform: translate(0%);
 }
-.first__li{
+
+.first__li {
     font-size: 17px;
     color: black;
 }
-.ul__mobile li{
+
+.ul__mobile li {
     font-size: 16px;
-        font-weight: 500;
-        font-family: var(--font-roboto);
-        color: var(--grey3);
+    font-weight: 500;
+    font-family: var(--font-roboto);
+    color: var(--grey3);
 }
-.ul__mobile .first__li{
+
+.ul__mobile .first__li {
     font-size: 16px;
     font-weight: 600;
     font-family: var(--font-roboto);
     color: var(--grey1);
 }
 
-.menu__mobile>input{
-        width: 231px;
-        height: 38px;
-        background-color: var(--grey5);
-        border-radius: 8px;
-        border: 0;
-        background-image: url(../assets/pesquisa.png);
-        background-position: 10px;
-        background-repeat: no-repeat;
-        margin-left: 2rem;
+.menu__mobile>input {
+    width: 231px;
+    height: 38px;
+    background-color: var(--grey5);
+    border-radius: 8px;
+    border: 0;
+    background-image: url(../assets/pesquisa.png);
+    background-position: 10px;
+    background-repeat: no-repeat;
+    margin-left: 2rem;
 
 }
-.mobile__profile{
+
+.mobile__profile {
     display: flex;
     align-items: center;
     gap: 15px;
@@ -82,42 +91,74 @@ font-size: 30px;
     font-weight: 500;
     padding: 20px 0px 0px 50px;
 }
-.div__desktop{
-    display: none;
-}
-.ul__desktop{
+
+.div__desktop {
     display: none;
 }
 
-@media(min-width:865px){
-    .btn__menu{
-        display:none
+.ul__desktop {
+    display: none;
+}
+
+@keyframes downMenu {
+    0% {
+        transform: translateY(-100%);
     }
-    .nav__desktop{
+
+    50% {
+        transform: translateY(3%);
+    }
+
+    100% {
+        transform: translateY(0%);
+    }
+}
+
+@keyframes upMenu {
+    to {
+        transform: translateY(0%);
+    }
+
+    from {
+        transform: translateY(-100%);
+    }
+}
+
+@media(min-width:865px) {
+    .btn__menu {
+        display: none
+    }
+
+    .nav__desktop {
         display: flex;
     }
-    .ul__desktop{
+
+    .ul__desktop {
         width: 30%;
         display: flex;
         gap: 15px;
     }
-    .ul__desktop li{
+
+    .ul__desktop li {
         font-size: 16px;
         font-weight: 500;
         font-family: var(--font-roboto);
         color: var(--grey3);
     }
-    .ul__desktop .first__li{
+
+    .ul__desktop .first__li {
         font-size: 16px;
         font-weight: 600;
         font-family: var(--font-roboto);
         color: var(--grey1);
     }
-    .div__desktop{
+
+    .div__desktop {
         display: flex;
         align-items: center;
     }
-    .div__desktop>input{
+
+    .div__desktop>input {
         width: 231px;
         height: 38px;
         background-color: var(--grey5);
@@ -127,8 +168,9 @@ font-size: 30px;
         background-position: 10px;
         background-repeat: no-repeat;
     }
-    .profile__desktop{
+
+    .profile__desktop {
         margin-left: 30px;
     }
-    
+
 }

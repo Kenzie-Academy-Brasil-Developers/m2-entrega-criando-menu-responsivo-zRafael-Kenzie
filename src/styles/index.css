@@ -45,10 +45,21 @@ font-size: 30px;
     margin-bottom: 20px;
     border-bottom: solid 1px var(--grey4);
 }
-
+.first__li{
+    font-size: 17px;
+    color: black;
+}
 .ul__mobile li{
     font-size: 16px;
-    font-weight: 500;
+        font-weight: 500;
+        font-family: var(--font-roboto);
+        color: var(--grey3);
+}
+.ul__mobile .first__li{
+    font-size: 16px;
+    font-weight: 600;
+    font-family: var(--font-roboto);
+    color: var(--grey1);
 }
 
 .menu__mobile>input{
@@ -90,11 +101,17 @@ font-size: 30px;
         display: flex;
         gap: 15px;
     }
-    .ul li ~ li {
+    .ul__desktop li{
         font-size: 16px;
         font-weight: 500;
         font-family: var(--font-roboto);
-        color: var(--grey2);
+        color: var(--grey3);
+    }
+    .ul__desktop .first__li{
+        font-size: 16px;
+        font-weight: 600;
+        font-family: var(--font-roboto);
+        color: var(--grey1);
     }
     .div__desktop{
         display: flex;
@@ -113,9 +130,5 @@ font-size: 30px;
     .profile__desktop{
         margin-left: 30px;
     }
-    .ul__desktop>li {
-        font-size: 16px;
-        font-weight: 500;
-        font-family: var(--font-roboto);
-    }
+    
 }
